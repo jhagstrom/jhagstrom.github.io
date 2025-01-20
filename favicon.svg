@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Rounded square background -->
+  <rect 
+    x="2" 
+    y="2" 
+    width="28" 
+    height="28" 
+    rx="6" 
+    fill="#e8eae8" 
+  />
+  
+  <!-- Letter L -->
+  <path 
+    d="M10 8 L10 22 L22 22 L22 18 L14 18 L14 8 Z" 
+    fill="#2c4a3c"
+  />
+</svg>

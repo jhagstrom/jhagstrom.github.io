@@ -1,0 +1,344 @@
+/* Color variables */
+:root {
+  --bg-color: #e8eae8;          /* Light gray-green for document background */
+  --card-bg: #f7f7f7;           /* White for cards */
+  --text-color: #2c4a3c;        /* Dark green for text */
+  --text-muted: #5c756c;        /* Muted green for secondary text */
+  --accent-color: #3e6b52;      /* Medium green for buttons/accents */
+  --accent-hover: #2c4a3c;      /* Darker green for hover states */
+  --shadow-color: rgba(44, 74, 60, 0.1); /* Green-tinted shadow */
+}
+/* Banner image styles */
+.banner {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  background-color: var(--bg-color);
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Optional overlay for better text readability */
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(44, 74, 60, 0.3), rgba(44, 74, 60, 0.5));
+}
+
+/* Banner content positioning */
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Responsive banner height */
+@media (max-width: 768px) {
+  .banner {
+    height: 300px;
+  }
+}
+
+/* Image grid for gallery */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Profile image style */
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  border: 4px solid var(--card-bg);
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+/* Base responsive container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive typography */
+html {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  font-family: Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Simple grid system */
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Navigation */
+nav {
+  padding: 1rem 0;
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-title {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  nav ul {
+    justify-content: center;
+  }
+}
+
+/* Typography scaling */
+h1 { 
+  font-size: 2.5rem;
+  color: var(--accent-color);
+}
+h2 { 
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+h3 { 
+  font-size: 1.75rem;
+  color: var(--accent-color);
+}
+h4 { 
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.5rem; }
+  h4 { font-size: 1.25rem; }
+}
+
+/* Basic spacing utilities */
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.py-1 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-2 { padding-top: 2rem; padding-bottom: 2rem; }
+
+/* Card component with optional image */
+.card {
+  padding: 0;  /* Remove default padding */
+  border-radius: 8px;
+  background: var(--card-bg);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  overflow: hidden;  /* Ensures image corners match card radius */
+}
+
+/* Card image container */
+.card-image {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card content area */
+.card-content {
+  padding: 1.5rem;
+}
+
+/* Optional overlay for image */
+.card-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.2));
+}
+
+/* Card variations */
+.card-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.card-horizontal .card-image {
+  width: 200px;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .card-horizontal {
+    flex-direction: column;
+  }
+  
+  .card-horizontal .card-image {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* Basic button styles */
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background: var(--accent-hover);
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Secondary text */
+.text-muted {
+  color: var(--text-muted);
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 300px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--text-muted);
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.search-button {
+  padding: 0.5rem 1rem;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background: var(--accent-hover);
+}
+
+/* New search icon styles */
+.search-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.search-icon:hover {
+  transform: scale(1.1);
+}
