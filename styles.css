@@ -146,8 +146,9 @@ nav {
 
 .nav-title {
   margin: 0;
-  font-size: 1.5rem;
-  color: var(--accent-color);
+  font-size: 2.5rem;
+  font-family: Pacifico;
+  color: var(--text-color);
 }
 
 nav ul {
