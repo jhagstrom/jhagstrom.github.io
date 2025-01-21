@@ -248,7 +248,7 @@ h4 {
 
 .card-content h1,
 .card-content h2,
-.card-content h3,{
+.card-content h3{
   margin-top: 0.1rem; /* Adjust the top margin as needed */
   margin-bottom: 0.5rem; /* Adjust the bottom margin as needed */
 }
