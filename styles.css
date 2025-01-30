@@ -115,8 +115,8 @@ img {
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr;
+  margin-bottom: 2rem; /* Add margin between grids */
 }
-
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -226,6 +226,15 @@ h4 {
   background: var(--card-bg);
   box-shadow: 0 2px 4px var(--shadow-color);
   overflow: hidden;  /* Ensures image corners match card radius */
+}
+.article-card {
+  padding: 0;  /* Remove default padding */
+  border-radius: 8px;
+  background: var(--card-bg);
+  box-shadow: 0 2px 4px var(--shadow-color);
+  overflow: hidden;  /* Ensures image corners match card radius */
+  max-width: 800px; /* Set the max-width as needed */
+  margin: 0 auto; /* Center the card */
 }
 
 /* Card image container */
